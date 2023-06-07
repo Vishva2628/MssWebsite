@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Madras Seva Sadan</title>
+
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+<style>
+  body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.gallery_sec {
+  display: flex;
+  overflow: hidden;
+  height: 50vw;
+  background: #111;
+}
+
+.gallery_sec:hover img {
+  opacity: 0.5;
+}
+
+.gallery_sec img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 1px solid black;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+.gallery_sec  img:hover {
+  opacity: 1;
+}
+
+.gallery_sec .column {
+  -webkit-animation: var(--animation, none) 16s infinite linear;
+          animation: var(--animation, none) 16s infinite linear;
+}
+
+.gallery_sec .column:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.gallery_sec .column:nth-of-type(odd) {
+  align-self: flex-end;
+  --direction: 50%;
+}
+
+@-webkit-keyframes slide {
+  to {
+    transform: translateY(var(--direction, -50%));
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateY(var(--direction, -50%));
+  }
+}
+/*  */
+</style>
+</head>
+<body>
+
+     <!-- ==================== Start Loading ==================== -->
+    <div id="loading" class="loading-container">
+        <!-- <div class="loading-spinner"></div> -->
+      </div>
+    <!-- ==================== End Loading ==================== -->
+
+
+    <!-- Main Container Start-->
+    <header class="gallery_sec">
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=890" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=891" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=892" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=893" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=894" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=885" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=896" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=887" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=898" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=889" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=910" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=911" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=871" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=872" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=873" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=874" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=861" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=862" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=863" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=864" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=851" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=852" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=853" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=855" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=841" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=842" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=845" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=844" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="https://picsum.photos/300/300?image=831" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=832" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=833" alt="image"></a>
+            <a href="#"><img src="https://picsum.photos/300/300?image=834" alt="image"></a>
+        </div>
+    </header>
+    <!-- Main Container End -->
+    
+ 
+
+
+    <!-- ==================== Scrip Code ================================= -->
+   <!--  <script src="./js/custom.js"></script> -->
+
+    <script>
+    [...document.querySelectorAll('.column')].map(column => {
+	column.style.setProperty('--animation', 'slide');
+	column.style.setProperty('height', '200%');
+	column.innerHTML = column.innerHTML + column.innerHTML;
+});
+
+    </script>
+
+</body>
+</html>
